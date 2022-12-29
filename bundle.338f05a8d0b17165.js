@@ -31471,8 +31471,8 @@
         e = [];
       return (
         t
-          ? e.push(this._loadLibrary("./draco/draco_decoder.js", "text"))
-          : (e.push(this._loadLibrary("./draco/draco_wasm_wrapper.js", "text")),
+          ? e.push(this._loadLibrary("draco_decoder.js", "text"))
+          : (e.push(this._loadLibrary("draco_wasm_wrapper.js", "text")),
             e.push(this._loadLibrary("draco_decoder.wasm", "arraybuffer"))),
         (this.decoderPending = Promise.all(e).then((e) => {
           const n = e[0];
@@ -31539,7 +31539,7 @@
       return (this.workerPool.length = 0), this;
     }
   })();
-  lg.setDecoderPath("/draco/");
+  lg.setDecoderPath("./draco/");
   const cg = new (class extends pu {
     constructor(t) {
       super(t),
