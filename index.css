@@ -7,11 +7,11 @@
 
 @font-face {
     font-family: Alliance;
-    src: url(/1ffe07d363e628e4.otf) format("opentype");
+    src: url(dbad94281a1ca689391e.otf) format("opentype");
 }
 @font-face {
     font-family: GT America;
-    src: url(/assets/fonts/308aaf65bdacce99.ttf) format("opentype");
+    src: url(assets/fonts/93617c9a80a203800c6f.ttf) format("opentype");
 }
 :root {
     --highlight-color: #f00505;
@@ -389,6 +389,10 @@ input:valid {
     flex: 50%;
 }
 
+.highlight {
+    color: #00d1f7;
+}
+
 @media screen and (max-width: 1000px) {
     .hero-text-container {
         margin: 10vh 5vw;
@@ -483,4 +487,4 @@ input:valid {
 }
 
 
-/*# sourceMappingURL=main.css.map*/
+/*# sourceMappingURL=index.css.map*/
