@@ -222,6 +222,9 @@ input:valid {
     height: 50px;
     justify-items: end;
 }
+.linkedin-logo {
+    height: 45px;
+}
 .youtube-logo {
     width: 70px;
 }
