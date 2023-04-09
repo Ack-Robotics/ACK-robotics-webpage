@@ -14,7 +14,7 @@
     src: url(assets/fonts/93617c9a80a203800c6f.ttf) format("opentype");
 }
 :root {
-    --highlight-color: #f00505;
+    --highlight-color: #00d1f7;
     --off-white: #f0f0f0;
 }
 html,
@@ -38,7 +38,6 @@ body {
 }
 a {
     text-decoration: none;
-    color: black;
 }
 .heroWrapper {
     top: 0;
@@ -331,26 +330,16 @@ input:valid {
     padding-bottom: 100px;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: stretch;
     flex-wrap: nowrap;
 }
 
 .projects-video {
-    width: 100%;
-    justify-self: center;
-    flex: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    flex-grow: 1;
 }
-.project-video-embed {
-    margin: 50px 20px;
-    margin-top: 0;
-    width: 400px;
-    height: 225px;
-}
+
 .projects-description {
-    flex: 50%;
     height: 100%;
     flex-grow: 1;
     width: 0;
