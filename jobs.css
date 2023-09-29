@@ -218,6 +218,13 @@ input:valid {
     padding-left: 20px;
 }
 
+.footer-careers {
+    color: var(--off-white);
+    font-size: large;
+    font-weight: 500;
+    margin: 10px 10px;
+}
+
 .footer-social-logo {
     width: 50px;
     height: 50px;
@@ -367,7 +374,13 @@ input:valid {
 .social-links {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
+    align-items: center;
+}
+.social-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 .hero-text-container {
@@ -382,6 +395,8 @@ input:valid {
 }
 
 .form-section {
+    display: block;
+    position: relative;
     max-width: 100%;
     padding: 100px 10vw;
     display: flex;
@@ -389,6 +404,12 @@ input:valid {
     flex-direction: row;
     background-color: var(--highlight-color);
 }
+/* .form-section::after {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+} */
 
 .form-title {
     margin-top: 50px;
@@ -396,7 +417,18 @@ input:valid {
     font-size: 40px;
     flex: 50%;
 }
-
+.careers-floater {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50px;
+    background-color: orange;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 .form {
     display: flex;
     flex-direction: column;
@@ -440,6 +472,10 @@ input:valid {
 
     .details-title > h1 {
         font-size: 25px;
+    }
+    .careers-floater {
+        width: 100%;
+        justify-content: center;
     }
 }
 
