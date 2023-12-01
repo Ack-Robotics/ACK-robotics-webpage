@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -89,7 +90,7 @@ a {
 }
 .subtitle {
     color: black;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 4vh;
     text-align: center;
 }
@@ -321,58 +322,46 @@ input:valid {
 
 .projects-section {
     width: 100%;
-    max-width: 100%;
     background-color: #d3d3d3;
-    margin-top: 200px;
-}
-
-.projects {
-    padding: 50px 30px;
-    font-size: 30px;
-}
-
-.projects-container {
-    width: 90%;
-    margin: auto;
-}
-
-.projects-content {
-    width: 100%;
-    margin: auto;
-    padding-bottom: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    flex-wrap: nowrap;
-}
-
-.projects-video {
-    width: 100%;
-    justify-self: center;
-    flex: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.project-video-embed {
-    margin: 50px 20px;
-    margin-top: 0;
-    width: 400px;
-    height: 225px;
-}
-.projects-description {
-    flex: 50%;
-    height: 100%;
-    flex-grow: 1;
-    width: 0;
-    margin: 0 20px 0 0;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+}
+.swiper {
+    margin-top: 3vh;
+    width: 800px;
+    height: 400px;
 }
 
-.project-text {
-    margin: 20px 0;
+.project-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 100px;
+    flex-wrap: wrap;
+}
+
+.project-image {
+    flex: 60%;
+}
+
+.project-description {
+    height: 100%;
+    width: 100%;
+    /* min-width: 340px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 40%
+}
+.project-description > p {
+    margin: 20px auto;
 }
 
 .social-links {
@@ -459,7 +448,7 @@ input:valid {
     display: none;
 }
 .we-provide-container {
-    margin: 3vh auto;
+    margin: 1vh auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -476,14 +465,16 @@ input:valid {
     min-width: 200px;
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 20px;
-    flex: 30%;
-    max-width: 350px;
+    padding: 20px 40px;
+    flex: 33%;
+    max-width: 450px;
 }
 
 .we-provide-item-description {
-    text-align: center;
+    text-align: justify;
 }
+
+
 @media screen and (max-width: 1000px) {
     .hero-text-container {
         margin: 10vh 5vw;
@@ -494,11 +485,21 @@ input:valid {
     
 }
 
+@media screen and (max-width: 850px) {
+    .swiper {
+        width: 400px;
+        height: 700px;
+    }
+    .project-item {
+        padding: 10px 50px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .form-section {
         flex-direction: column;
         padding: 50px 10vw;
-        height: 450px;
+        height: fit-content;
         justify-content: start;
     }
     .form-title {
@@ -518,22 +519,6 @@ input:valid {
     .form-submit {
         margin-top: 30px;
         align-self: center;
-    }
-    .projects-content {
-        flex-direction: column;
-    }
-    .projects-video {
-        width: 100%;
-        height: 200px;
-    }
-    .projects-description {
-        width: 100%;
-    }
-    .projects {
-        padding-left: 0;
-    }
-    .projects-content {
-        padding-bottom: 50px;
     }
     .trottle-title {
         font-size: 12px;
@@ -566,14 +551,6 @@ input:valid {
     }
     .hero-text {
         font-size: 55px;
-    }
-    .footer-logo {
-        height: 60px;
-        width: 60px;
-    }
-    .footer-container {
-        margin: 0 4vw;
-        padding: 30px 0;
     }
     .trottle-container {
         height: 40%;
