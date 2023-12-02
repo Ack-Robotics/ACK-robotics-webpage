@@ -119,10 +119,6 @@ a {
     opacity: 1;
 }
 
-.footer {
-    background-color: black;
-}
-
 .feild-holder {
     position: relative;
     margin: 15px 0;
@@ -195,19 +191,33 @@ input:valid {
     display: flex;
     align-items: center;
 }
+.careers {
+    color: var(--off-white);
+    font-size: large;
+    font-weight: 500;
+    margin: 10px 10px;
+}
 
-.footer-logo {
-    height: 80px;
-    width: 80px;
-    border-radius: 50px;
+
+.footer {
+    background-color: black;
+    width: 100%;
 }
 
 .footer-container {
-    margin: 0 8vw;
-    padding: 50px 0;
-    display: grid;
-    grid-template-columns: 60% 40%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3vh 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
     align-items: center;
+}
+.footer-item {
+    flex: 50%;
+    width: 100%;
+    padding: 1vh 0;
 }
 
 .footer-company {
@@ -218,30 +228,43 @@ input:valid {
     align-items: center;
 }
 
+.footer-logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+}
+
 .footer-title {
     color: var(--off-white);
     padding-left: 20px;
 }
 
-.footer-careers {
+
+.footer-icon {
     color: var(--off-white);
-    font-size: large;
-    font-weight: 500;
-    margin: 10px 10px;
-}
-
-.footer-social-logo {
+    font-size: 30px;
     width: 50px;
-    height: 50px;
-    justify-items: end;
+    text-align: center;
 }
-.linkedin-logo {
-    height: 45px;
-}
-.youtube-logo {
-    width: 70px;
+.footer-contact-item{
+    color: var(--off-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 15px 0;
 }
 
+.footer-contact-item span {
+    margin: 5px 5px;
+}
+
+.social-icon {
+    font-size: 45px;
+    margin: 5px 10px;
+}
 .canvas2 {
     max-width: 100%;
     position: absolute;
@@ -332,14 +355,13 @@ input:valid {
 .swiper {
     margin-top: 3vh;
     width: 800px;
-    height: 400px;
 }
 
 .project-item {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px 100px;
@@ -347,27 +369,26 @@ input:valid {
 }
 
 .project-image {
-    flex: 60%;
+
 }
 
 .project-description {
     height: 100%;
     width: 100%;
-    /* min-width: 340px; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 40%
 }
 .project-description > p {
     margin: 20px auto;
+    text-align: justify;
 }
 
 .social-links {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .social-link {
@@ -396,13 +417,6 @@ input:valid {
     flex-direction: row;
     background-color: var(--highlight-color);
 }
-/* .form-section::after {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    z-index: 1;
-} */
-
 .form-title {
     margin-top: 50px;
     padding-left: 50px;
@@ -463,11 +477,16 @@ input:valid {
 }
 .we-provide-item {
     min-width: 200px;
-    flex-grow: 1;
-    flex-shrink: 1;
     padding: 20px 40px;
     flex: 33%;
     max-width: 450px;
+}
+.we-provide-item-image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .we-provide-item-description {
@@ -488,7 +507,6 @@ input:valid {
 @media screen and (max-width: 850px) {
     .swiper {
         width: 400px;
-        height: 700px;
     }
     .project-item {
         padding: 10px 50px;
@@ -527,6 +545,15 @@ input:valid {
     .about-us-description {
         width: 500px;
     }  
+}
+
+@media screen and (max-width: 650px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-contact-item {
+        margin: 15px 7px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -569,6 +596,9 @@ input:valid {
     .about-us-description {
         width:  280px;
         font-size: 15px;
+    }
+    .swiper {
+        width: 350px;
     }
 }
 
